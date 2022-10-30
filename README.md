@@ -5,8 +5,8 @@ A Toolkit for CPHOS affairs, including managing database, data analysis, ...
 
 1. 对该repo的大体介绍
 2. 本repo的依赖包安装与使用方法
-3. `/api`目录下各api的接收参数、返回参数
-4. 
+3. `/api`目录下各api的接收参数、返回参数（这一部分被移到了群文档“toolkit_1_api”中
+4. ...
 
 
 
