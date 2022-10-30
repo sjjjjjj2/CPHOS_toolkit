@@ -16,7 +16,7 @@ A Toolkit for CPHOS affairs, including managing database, data analysis, ...
 
 其中，所有使用mysql语言对数据库进行增删改查操作的、以及登录、开启事务与提交事务的，都由api中的文件实现。为了实现高级功能，仅需调用api即可。
 
-本repo的结构如下。
+本repo的结构如下。（待完善）
 
 ```
 -api
