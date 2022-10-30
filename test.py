@@ -19,4 +19,5 @@ returned = customTransaction.executeOperation(GetTeacherInfoByName("史景喆的
 print("now customTransaction.executeOperation(GetTeacherInfoByName('史景喆的小号')) returned:", returned)
 
 
-customTransaction.rollBack() #rollBack, not making any change to the database.
+customTransaction.rollBack() #rollBack, not making any change to the database. This can be omitted.
+#That is, customTransaction.rollBack() will be executed at the end of the program unless you use customTransaction.commit().
