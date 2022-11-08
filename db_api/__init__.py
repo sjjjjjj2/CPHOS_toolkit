@@ -21,10 +21,24 @@ class CustomTransaction():
         print("CustomTransaction init")
         print("Please enter the following database information:")
         self.host = input("host:")
-        self.port = int(input("port:"))
-        self.user = input("user:")
-        self.db = input("db:")
-        self.password = input("password:")
+        if self.host == str(0):
+            import os
+            with open (("C:\\Users\\Lenovo\\Desktop\\dbinformation.txt")) as f:
+                self.host = f.readline().strip()
+                self.port = int(f.readline().strip())
+                self.user = f.readline().strip()
+                self.db  = f.readline().strip()
+                self.password = f.readline().strip()
+                print("host:", self.host)
+                print("port:", self.port)
+                print("user:", self.user)
+                print("db:", self.db)
+
+        else:
+            self.port = int(input("port:"))
+            self.user = input("user:")
+            self.db = input("db:")
+            self.password = input("password:")
 
         # connect to database
         self.conn = None
