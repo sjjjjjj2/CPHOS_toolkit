@@ -11,6 +11,14 @@ class AddNewSchoolByName(CustomOperation):
                 raise Exception("No such Id!")
             if len(result) > 1:
                 raise Exception("More than one Id!")
+            cursor.execute("select * from cmf_tp_school where `school_name` = '{}' and `area` = {}".format(self.Name,self.AreaId))
+            result = cursor.fetchall()
+            if len(result) > 0:
+                print("School Named {} in Area id {} already exists!".format(self.Name,self.AreaId))
+                print("Now just return the id of the school.")
+                return result[0][0]
+            
+            
             cursor.execute("insert into cmf_tp_school (`school_name`,`area`) values ('{}',{})".format(self.Name,self.AreaId))
             cursor.execute("select * from cmf_tp_school where `school_name` = '{}' and `area` = {}".format(self.Name,self.AreaId))
             result = cursor.fetchall()
